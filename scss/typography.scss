@@ -1,0 +1,77 @@
+/* 
+  
+    Much of typographic base is in normalize.scss 
+
+    This is just override stuff
+
+*/
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff') format('woff');
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 85%;
+  font-weight: 400; /* Being specific to what we have */
+}
+
+h1, h2, h3, h4, h5, strong, dt, th {
+  font-weight: 700; /* Being specific to what we have */
+}
+
+h2 {
+  background: $color-1;  
+  padding: 10px;
+  color: #222;
+  text-align: center;
+
+  .module & {
+    margin: 0px -#{$globalPadding} $globalPadding;
+  }
+  .module.map & {
+    margin: 0px -#{$globalPadding}*2;
+  }
+
+  .color-1 & { background: $color-1; }
+  .color-2 & { background: $color-2; }
+  .color-3 & { background: $color-3; }
+  .color-4 & { background: $color-4; }
+  .color-5 & { background: $color-5; }
+  .color-6 & { background: $color-6; }
+
+  /*
+  This should work but I'm too dumb.
+  @for $i from 1 through 6 {
+    .color-#{$i} & { 
+      background: $color-#{$i}; 
+    }
+  }
+  */
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 $globalPadding 0;
+  padding: 0;
+}
+.text {
+  ol {
+    list-style: decimal;
+    padding: 0 0 0 15px;
+    li {
+      margin: 0 0 10px 0;
+
+    }
+  }
+}

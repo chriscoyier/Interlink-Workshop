@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'IcoMoon';
+  src: url('../fonts/IcoMoon.eot');
+  src: url('../fonts/IcoMoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IcoMoon.svg#IcoMoon') format('svg'),
+    url('../fonts/IcoMoon.woff') format('woff'),
+    url('../fonts/IcoMoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon] {
+  position: relative;
+  top: 3px;
+}
+[data-icon]:before {
+  font-family: 'IcoMoon';
+  content: attr(data-icon);
+  margin: 0 3px 0 0;
+  speak: none;
+}
+
+
+
+/*   We're not going to do it this way, but you could.
+
+.icon-picture:before {
+  content: "\0023";
+}
+.icon-play:before {
+  content: "\0021";
+}
+.icon-user:before {
+  content: "\25cb";
+}
+.icon-calendar:before {
+  content: "\0024";
+}
+
+*/
